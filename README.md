@@ -1,4 +1,4 @@
-# Prosty notatnik stworzony na potrzey portfolio
+# Prosty notatnik stworzony na potrzeby portfolio
 Notatnik zawiera listę notatek utworzonych przez użytkownika.
 
 
