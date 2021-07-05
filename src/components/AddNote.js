@@ -18,11 +18,13 @@ const AddNote = ({onClick}) => {
         
     }
     return(
-        <form onSubmit={onSubmit}>
-            <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
-            <input type="checkbox" checked={important} value={important} onChange={(e) => setImportant(e.currentTarget.checked)} /> Ważne!
-            <input type="submit" value="Dodaj" />
+        <div className="addNote">
+            <form onSubmit={onSubmit}>
+            <input type="text" placeholder="dodaj notatke..." value={text} onChange={(e) => setText(e.target.value)} />
+            <input type="checkbox"  checked={important} value={important} onChange={(e) => setImportant(e.currentTarget.checked)} /> Ważne!
+            <input type="submit" value="Dodaj"  className="btn-add"/>
         </form>
+        </div>
     )
 }
 

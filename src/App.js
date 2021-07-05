@@ -10,18 +10,18 @@ function App() {
   const [notes,setNotes] = useState([
     {
         id:1,
-        text:'Dzisiaj jest ładna pogoda',
-        important:false
+        text:'16 maja, rocznica ślubu!',
+        important:true
     },
     {
         id:2,
-        text:'Jutro jest gra na orliku',
+        text:'18 maja o 16:30, karmielicka 11 - spotkanie',
         important:true
     },
     {
         id:3,
-        text:'Wyrzucić śmieci!',
-        important:true
+        text:'24 maja urlop!',
+        important:false
     }
 ])
 
@@ -42,7 +42,7 @@ const addNote = (note) =>{
   return (
     <div className="App">
       <Header />
-      <AddNote onClick={addNote}/>
+      <AddNote onClick={addNote} />
       {notes.length > 0 ? <Notes notes={notes} onDelete={deleteNote} onToggle={toggleImportant} /> : 'Nie ma żadnych notatek.' } 
     </div>
   );

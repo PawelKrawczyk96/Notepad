@@ -22,24 +22,93 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   height: 100%;
   width:100%;
+}
+.header{
+  width:100px;
+  background-color: #3CD895;
+  width: 100%;
+  color: #05386B;
+}
+
+.addNote{
+  width: 100%;
+  margin: 8px;
+}
+
+.addNote form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.addNote input{
+  margin: 0 8px;
+}
+
+form input[type=text]{
+  border-radius: 2px;
+  border: 1px solid black;
+  background: linear-gradient(to right,#8ee4af 50%, white 50%);
+  background-position: top right;
+  background-size: 200% 100%;
+  transition: all .5s ease-out;
+  padding: 5px;
+}
+
+form input[type=text]:focus{
+  background-position: bottom left;
+}
+
+.btn-add{
+  border: 1px solid black;
+  border-radius: 5px;
+  background: linear-gradient(to bottom,#379683 50%, white 50%);
+  background-size: 100% 200%;
+  padding: 8px 24px;
+  color: black;
+  cursor: pointer;
+  background-position: bottom;
+  transition: all .5s ease-out;
+}
+
+.btn-add:hover{
+  background-position: top;
+  color: #EDF5E1;
 }
 
 .note{
   width:50%;
-  padding: 15px 10%;
-  margin: 10px 0;
-  border: 1px solid black;
-  border-radius: 10px;
+  padding: 0px 14px;
+  border: 1px dotted black;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  background-color: #f0f0f0;
+  color: #555;
+  
+}
+
+.note::after{
+  position:absolute;
+  content: "";
+  width:2px;
+  height:101%;
+  top:0;
+  left:24px;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 }
 
 .note h2{
   text-align: start;
+  padding: 0 0 0 48px;
+  margin: 8px 0;
+  overflow: auto;
 }
 
 .btn-remove{

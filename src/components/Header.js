@@ -9,9 +9,8 @@ const Header = ({title}) => {
         console.log('test')
     }
     return (
-        <header>
+        <header className="header">
             <h1>Notatnik</h1>
-            <Button color="green" text="Dodaj" onClick={onClick} />
         </header>
     )
 }
